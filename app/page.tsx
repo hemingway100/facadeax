@@ -192,8 +192,7 @@ export default function Home() {
 
       {/* Timetable */}
       <section className="max-w-4xl mx-auto px-4 py-12">
-        <h2 className="text-xl font-extrabold text-warm-text mb-1.5 text-center">AI/AX TIME TABLE</h2>
-        <p className="text-warm-sub text-center mb-7 text-sm">Day 1은 기초 체험과 첫 실습, Day 2는 팀별 프로젝트에 올인합니다.</p>
+        <h2 className="text-xl font-extrabold text-warm-text mb-7 text-center">AI/AX TIME TABLE</h2>
         <div className="flex flex-col lg:flex-row gap-4">
           <DayCard title='Day 1 — 7/9(수)' motto='"함께 배우고, 함께 만들기 시작"' slots={day1Slots} variant="d1" color="bg-d1" />
           <DayCard title='Day 2 — 7/11(금)' motto='"우리 팀 CRM, 오늘 만들어서 오늘 쓴다"' slots={day2Slots} variant="d2" color="bg-d2" />
@@ -217,7 +216,7 @@ export default function Home() {
       <section id="survey" className="max-w-2xl mx-auto px-4 py-14">
         <div className="text-center mb-10">
           <h2 className="text-xl font-extrabold text-warm-text mb-1.5">사전 설문조사</h2>
-          <p className="text-warm-sub text-sm">교육 커리큘럼을 수강생 맞춤으로 조정하기 위한 설문입니다.</p>
+          <p className="text-warm-sub text-sm">부담없이 설문에 응해주세요.</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-10">
@@ -235,7 +234,7 @@ export default function Home() {
           <div className="space-y-4">
             <div className="text-xs font-bold text-d1 tracking-wider">② AI 도구 사용 현황</div>
             <div><label className="block text-sm text-warm-sub mb-2">AI 도구 사용 빈도</label><RadioGroup name="freq" items={['거의 매일','주 2~3회','가끔 (월 수회)','거의 안 씀']} value={aiFreq} onChange={setAiFreq} /></div>
-            <div><label className="block text-sm text-warm-sub mb-2">사용 중인 AI 도구 (복수 선택)</label><CheckGroup items={['ChatGPT','Claude','Claude Cowork','Gemini','Copilot']} values={tools} onChange={setTools} hasOther otherValue={toolsO} onOtherChange={setToolsO} /></div>
+            <div><label className="block text-sm text-warm-sub mb-2">사용 중인 AI 도구 (복수 선택)</label><CheckGroup items={['ChatGPT','Claude','Claude Code','Claude Cowork','Gemini','Antigravity','Codex']} values={tools} onChange={setTools} hasOther otherValue={toolsO} onOtherChange={setToolsO} /></div>
             <div><label className="block text-sm text-warm-sub mb-2">AI 활용 용도 (복수 선택)</label><CheckGroup items={['문서 작성/교정','데이터 분석','아이디어 브레인스토밍','이메일/메시지 작성','업무 자동화','코드 작성','번역']} values={usage} onChange={setUsage} hasOther otherValue={usageO} onOtherChange={setUsageO} /></div>
           </div>
 
@@ -252,16 +251,13 @@ export default function Home() {
             <div className="text-xs font-bold text-red-600 tracking-wider">④ 업무 Pain Point</div>
             <div><label className="block text-sm text-warm-sub mb-1.5">가장 비효율적인 업무 프로세스 (최대 3개)</label><textarea value={pain} onChange={e => setPain(e.target.value)} rows={3} placeholder="예: 주간보고를 매번 수동으로 엑셀에 정리..." className={`${inputCls} resize-none`} /></div>
             <div><label className="block text-sm text-warm-sub mb-1.5">전용 프로그램이 필요한 업무</label><textarea value={excel} onChange={e => setExcel(e.target.value)} rows={2} placeholder="예: 고객 문의 이력 관리, 재고 트래킹..." className={`${inputCls} resize-none`} /></div>
-            <div><label className="block text-sm text-warm-sub mb-2">관리하는 데이터 유형 (복수 선택)</label><CheckGroup items={['고객/거래처','프로젝트 현황','재고/자산','매출/비용','일정/스케줄','인사/근태','문서/계약']} values={dataT} onChange={setDataT} hasOther otherValue={dataTO} onOtherChange={setDataTO} /></div>
+            <div><label className="block text-sm text-warm-sub mb-2">관리하는 데이터 유형 (복수 선택)</label><CheckGroup items={['고객/거래처','프로젝트 현황','재고/자산','매출/비용','일정/스케줄','인사/근태','문서/계약','광고 데이터']} values={dataT} onChange={setDataT} hasOther otherValue={dataTO} onOtherChange={setDataTO} /></div>
           </div>
 
           {/* Part 5 */}
           <div className="space-y-4">
             <div className="text-xs font-bold text-d2 tracking-wider">⑤ 교육 기대사항</div>
             <div><label className="block text-sm text-warm-sub mb-2">배우고 싶은 것 (복수 선택)</label><CheckGroup items={['바이브코딩 원리','클로드 코드 사용법','업무용 CRM 제작','데이터베이스 설계','프롬프트 작성법','배포 방법']} values={learn} onChange={setLearn} hasOther otherValue={learnO} onOtherChange={setLearnO} /></div>
-            <div><label className="block text-sm text-warm-sub mb-1.5">만들어보고 싶은 것</label><input type="text" value={build} onChange={e => setBuild(e.target.value)} placeholder="예: 우리 팀 프로젝트 관리 대시보드" className={inputCls} /></div>
-            <div><label className="block text-sm text-warm-sub mb-1.5">걱정/우려 사항 (선택)</label><textarea value={concern} onChange={e => setConcern(e.target.value)} rows={2} placeholder="자유롭게 적어주세요" className={`${inputCls} resize-none`} /></div>
-            <div><label className="block text-sm text-warm-sub mb-1.5">사전 준비에서 도움 필요한 부분 (선택)</label><input type="text" value={setup} onChange={e => setSetup(e.target.value)} placeholder="예: Node.js 설치 방법을 모르겠어요" className={inputCls} /></div>
           </div>
 
           {error && <div className="bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-sm text-red-600">{error}</div>}
