@@ -132,7 +132,6 @@ export default function Home() {
       painPoints: pain.trim(), excelWork: excel.trim(),
       dataTypes: [...dataT, dataTO ? `기타: ${dataTO}` : ''].filter(Boolean).join(', '),
       wantToLearn: [...learn, learnO ? `기타: ${learnO}` : ''].filter(Boolean).join(', '),
-      wantToBuild: build.trim(), concerns: concern.trim(), setupHelp: setup.trim(),
     }
     try {
       if (GOOGLE_SCRIPT_URL) {
