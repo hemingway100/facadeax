@@ -135,7 +135,7 @@ export default function Home() {
     }
     try {
       if (GOOGLE_SCRIPT_URL) {
-        await fetch(GOOGLE_SCRIPT_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) })
+        await fetch(GOOGLE_SCRIPT_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain'}, body:JSON.stringify(payload) })
       }
       setSubmitted(true); window.scrollTo({ top:0, behavior:'smooth' })
     } catch { setError('제출 중 오류가 발생했습니다.') }
