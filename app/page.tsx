@@ -170,15 +170,12 @@ export default function Home() {
       {/* Hero */}
       <section className="bg-white border-b border-warm-border">
         <div className="max-w-4xl mx-auto px-4 pt-8 pb-10 text-center">
-          <div className="inline-flex items-center gap-2 text-xs bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5 text-emerald-600 font-semibold mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            수강생 모집 중 — 사전 설문 진행 중
-          </div>
-          <div className="flex items-center justify-center gap-5 mb-4">
+          <div className="flex items-center justify-center gap-5 mb-3">
             <img src="/facade-logo.png" alt="FACADE PATTERN" className="h-10 object-contain" />
             <span className="text-warm-border text-lg">×</span>
             <img src="/p404-logo.png" alt="PROJECT 404" className="h-10 object-contain" />
           </div>
+          <p className="text-sm text-warm-sub mb-6">사전 설문에 참여해주세요!</p>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-warm-text leading-tight mb-3">
             AI/AX 실전 클로드코드<br />
             <span className="text-d1">바이브코딩</span> 활용 교육
@@ -198,7 +195,7 @@ export default function Home() {
 
       {/* Timetable */}
       <section className="max-w-4xl mx-auto px-4 py-12">
-        <h2 className="text-xl font-extrabold text-warm-text mb-1.5 text-center">교육 타임테이블</h2>
+        <h2 className="text-xl font-extrabold text-warm-text mb-1.5 text-center">AI/AX TIME TABLE</h2>
         <p className="text-warm-sub text-center mb-7 text-sm">Day 1은 기초 체험과 첫 실습, Day 2는 팀별 프로젝트에 올인합니다.</p>
         <div className="flex flex-col lg:flex-row gap-4">
           <DayCard title='Day 1 — 7/9(수)' motto='"함께 배우고, 함께 만들기 시작"' slots={day1Slots} variant="d1" color="bg-d1" />
