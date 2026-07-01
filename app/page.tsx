@@ -7,14 +7,16 @@ const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || ''
 const day1Slots = [
   { time:'14:00', dur:'5분', tag:'도입', name:'오프닝 & 교육 안내', color:'text-warm-dim', bg:'bg-warm-dim/10', border:'border-warm-dim/20' },
   { time:'14:05', dur:'20분', tag:'사례', name:'엔터프라이즈 AI 실제 사례', color:'text-amber-600', bg:'bg-amber-50', border:'border-amber-200' },
-  { time:'14:25', dur:'70분', tag:'필수지식', name:'함께 설치하고 체험하는 개발 환경 첫걸음', color:'text-d1', bg:'bg-blue-50', border:'border-blue-200' },
-  { time:'15:35', dur:'30분', tag:'기획실습', name:'우리 팀 업무를 프로그램으로 바꾸는 기획 실습', color:'text-emerald-600', bg:'bg-emerald-50', border:'border-emerald-200' },
-  { time:'16:05', dur:'90분', tag:'팀실습', name:'팀별 맞춤 CRM 바이브코딩 실습', color:'text-d2', bg:'bg-purple-50', border:'border-purple-200' },
-  { time:'17:35', dur:'25분', tag:'발표', name:'팀별 초안 공유 & Day 2 준비', color:'text-red-600', bg:'bg-red-50', border:'border-red-200' },
+  { time:'14:25', dur:'70분', tag:'필수지식', name:'바이브코딩 필수 개념', color:'text-d1', bg:'bg-blue-50', border:'border-blue-200' },
+  { time:'15:35', dur:'30분', tag:'기획실습', name:'AI로 만든게 망하는 이유 - 기획이 중요하다', color:'text-emerald-600', bg:'bg-emerald-50', border:'border-emerald-200' },
+  { time:'16:05', dur:'90분', tag:'팀실습', name:'바이브코딩 시작! 우리 팀 SaaS 기획(데이터 재구성)', color:'text-d2', bg:'bg-purple-50', border:'border-purple-200' },
+  { time:'17:35', dur:'25분', tag:'발표', name:'팀별 초안 공유', color:'text-red-600', bg:'bg-red-50', border:'border-red-200' },
 ]
 const day2Slots = [
   { time:'14:00', dur:'15분', tag:'복습', name:'Day 1 복습 & 과제 점검', color:'text-warm-dim', bg:'bg-warm-dim/10', border:'border-warm-dim/20' },
-  { time:'14:15', dur:'180분', tag:'기획 Develop', name:'팀별 SaaS 집중 개발 (기획 확정 → 개발 → 배포)', color:'text-d2', bg:'bg-purple-50', border:'border-purple-200' },
+  { time:'14:15', dur:'60분', tag:'SaaS ①', name:'기획 Develop, 예외처리', color:'text-d2', bg:'bg-purple-50', border:'border-purple-200' },
+  { time:'15:15', dur:'60분', tag:'SaaS ②', name:'추가 수정 삭제는 아무때나?', color:'text-d2', bg:'bg-purple-50', border:'border-purple-200' },
+  { time:'16:15', dur:'60분', tag:'SaaS ③', name:'직접 다 만들어서 쓰자', color:'text-d2', bg:'bg-purple-50', border:'border-purple-200' },
   { time:'17:15', dur:'30분', tag:'발표', name:'팀별 결과물 발표 & 피드백', color:'text-red-600', bg:'bg-red-50', border:'border-red-200' },
   { time:'17:45', dur:'15분', tag:'마무리', name:'교육 마무리 & 향후 가이드', color:'text-warm-dim', bg:'bg-warm-dim/10', border:'border-warm-dim/20' },
 ]
@@ -170,12 +172,7 @@ export default function Home() {
       {/* Hero */}
       <section className="bg-white border-b border-warm-border">
         <div className="max-w-4xl mx-auto px-4 pt-8 pb-10 text-center">
-          <div className="flex items-center justify-center gap-5 mb-3">
-            <img src="/facade-logo.png" alt="FACADE PATTERN" className="h-10 object-contain" />
-            <span className="text-warm-border text-lg">×</span>
-            <img src="/p404-logo.png" alt="PROJECT 404" className="h-10 object-contain" />
-          </div>
-          <p className="text-sm text-warm-sub mb-6">사전 설문에 참여해주세요!</p>
+          <p className="text-sm tracking-widest text-warm-sub mb-5 font-medium">FACADE PATTERN</p>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-warm-text leading-tight mb-3">
             AI/AX 실전 클로드코드<br />
             <span className="text-d1">바이브코딩</span> 활용 교육
