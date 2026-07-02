@@ -179,7 +179,7 @@ export default function Home() {
           <p className="text-lg text-warm-sub mb-7">우리 팀만의 업무 CRM, 바이브코딩으로 직접 만들기</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center text-sm mb-8">
             <span className="bg-blue-50 text-d1 px-4 py-1.5 rounded-lg font-semibold border border-blue-200">Day 1 — 7/8(화) 14:00~18:00</span>
-            <span className="bg-purple-50 text-d2 px-4 py-1.5 rounded-lg font-semibold border border-purple-200">Day 2 — 7/11(금) 14:00~18:00</span>
+            <span className="bg-purple-50 text-d2 px-4 py-1.5 rounded-lg font-semibold border border-purple-200">Day 2 — 7/10(목) 14:00~18:00</span>
             <span className="bg-cream text-warm-sub px-4 py-1.5 rounded-lg font-medium border border-warm-border">총 8시간 (4시간 × 2일)</span>
           </div>
           <a href="#survey" className="inline-flex items-center gap-2 bg-d1 hover:bg-d1/90 text-white font-bold px-8 py-3 rounded-xl transition-colors shadow-md shadow-d1/20">
@@ -194,7 +194,7 @@ export default function Home() {
         <h2 className="text-xl font-extrabold text-warm-text mb-7 text-center">AI/AX TIME TABLE</h2>
         <div className="flex flex-col lg:flex-row gap-4">
           <DayCard title='Day 1 — 7/8(화)' motto='"함께 배우고, 함께 만들기 시작"' slots={day1Slots} variant="d1" color="bg-d1" />
-          <DayCard title='Day 2 — 7/11(금)' motto='"우리 팀 CRM, 오늘 만들어서 오늘 쓴다"' slots={day2Slots} variant="d2" color="bg-d2" />
+          <DayCard title='Day 2 — 7/10(목)' motto='"우리 팀 CRM, 오늘 만들어서 오늘 쓴다"' slots={day2Slots} variant="d2" color="bg-d2" />
         </div>
       </section>
 
